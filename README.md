@@ -7,6 +7,6 @@ you can get this on this source.
 
 https://www.docker.com/get-docker
 
-You Just need to run the follow command and see it working
+You Just need to clone this repository and run the following command and see it working
 
 docker-compose up
