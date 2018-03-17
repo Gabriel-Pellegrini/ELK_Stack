@@ -1,0 +1,7 @@
+#GROK CUSTOM PATTERNS
+
+#BEATLOG \[%{DATE:date}\s%{TIME:time}\]\s\[%{THREAD:currentThread}\]\s%{MESSAGE:logs}
+#DATE (\d{2}\/\d{2}\/\d{4})
+#TIME (\d{2}\:\d{2}\:\d{2})
+#THREAD (\w{6}\-\d+)
+#MESSAGE (\w.+)

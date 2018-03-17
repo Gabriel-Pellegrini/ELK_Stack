@@ -1,0 +1,28 @@
+[07/03/2018 00:00:20] [Thread-136] ConnectionPool::reapConnections() -> limpou 0 conexoes, restam 0
+[07/03/2018 00:00:50] [Thread-136] ConnectionPool::reapConnections() -> limpou 0 conexoes, restam 0
+[07/03/2018 00:00:52] [Thread-92] SCComunicacao -> enviaMensagemSincronaComponente(Mensagem, ChaveConfComponente, String) -> envia mensagens
+[07/03/2018 00:00:52] [Thread-92] SCComunicacao -> enviaMensagemSincronaComponente(Mensagem, ChaveConfComponente, String) -> envia mensagens
+[07/03/2018 00:01:02] [Thread-92] SCComunicacao -> enviaMensagemSincronaComponente(Mensagem, ChaveConfComponente, String) -> envia mensagens
+[07/03/2018 00:01:02] [Thread-92] SCComunicacao -> enviaMensagemSincronaComponente(Mensagem, ChaveConfComponente, String) -> envia mensagens
+[07/03/2018 00:01:02] [Thread-92] SCComunicacao -> enviaMensagemSincronaComponente(Mensagem, ChaveConfComponente, String) -> envia mensagens
+[07/03/2018 00:01:02] [Thread-92] SCComunicacao -> enviaMensagemSincronaComponente(Mensagem, ChaveConfComponente, String) -> envio Ok
+[07/03/2018 00:01:02] [Thread-92] SCComunicacao -> enviaMensagemSincronaComponente(Mensagem, ChaveConfComponente, String) -> envia mensagens
+[07/03/2018 00:01:02] [Thread-92] SCComunicacao -> enviaMensagemSincronaComponente(Mensagem, ChaveConfComponente, String) -> envia mensagens
+[07/03/2018 00:01:02] [Thread-92] SCComunicacao -> enviaMensagemSincronaComponente(Mensagem, ChaveConfComponente, String) -> envia mensagens
+[07/03/2018 00:01:02] [Thread-92] SCComunicacao -> enviaMensagemSincronaComponente(Mensagem, ChaveConfComponente, String) -> envio Ok
+[07/03/2018 00:01:02] [Thread-92] SCComunicacao -> enviaMensagemSincronaComponente(Mensagem, ChaveConfComponente, String) -> envia mensagens
+[07/03/2018 00:01:12] [Thread-92] SCComunicacao -> enviaMensagemSincronaComponente(Mensagem, ChaveConfComponente, String) -> envia mensagens
+[07/03/2018 00:01:12] [Thread-92] SCComunicacao -> enviaMensagemSincronaComponente(Mensagem, ChaveConfComponente, String) -> envia mensagens
+[07/03/2018 00:01:12] [Thread-92] SCComunicacao -> enviaMensagemSincronaComponente(Mensagem, ChaveConfComponente, String) -> envia mensagens
+[07/03/2018 00:01:20] [Thread-136] ConnectionPool::reapConnections() -> limpou 0 conexoes, restam 0
+[07/03/2018 00:01:22] [Thread-92] SCComunicacao -> enviaMensagemSincronaComponente(Mensagem, ChaveConfComponente, String) -> envia mensagens
+[07/03/2018 00:01:23] [Thread-92] SCComunicacao -> enviaMensagemSincronaComponente(Mensagem, ChaveConfComponente, String) -> envia mensagens
+[07/03/2018 00:01:23] [Thread-92] SCComunicacao -> enviaMensagemSincronaComponente(Mensagem, ChaveConfComponente, String) -> envio Ok
+[07/03/2018 00:01:50] [Thread-136] ConnectionPool::reapConnections() -> limpou 0 conexoes, restam 0
+[07/03/2018 00:02:20] [Thread-136] ConnectionPool::reapConnections() -> limpou 0 conexoes, restam 0[07/03/2018 00:00:20] [Thread-136] ConnectionPool::reapConnections() -> limpou 0 conexoes, restam 0
+[07/03/2018 00:00:50] [TESTES-200] ConnectionPool::reapConnections() -> limpou 0 conexoes, restam 0
+[07/03/2018 00:00:50] [TESTES-400] ConnectionPool::reapConnections() -> limpou 0 conexoes, restam 0
+[07/03/2018 00:00:50] [TESTES-500] ConnectionPool::reapConnections() -> limpou 0 conexoes, restam 0
+[07/03/2018 00:00:50] [TESTES-550] ConnectionPool::reapConnections() -> limpou 0 conexoes, restam 0
+
+

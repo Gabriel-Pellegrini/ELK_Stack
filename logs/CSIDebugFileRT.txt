@@ -1,0 +1,15 @@
+[06/03/2018 17:35:35 - main] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+[06/03/2018 17:35:35 - main] SLF4J: Defaulting to no-operation (NOP) logger implementation
+[06/03/2018 17:35:35 - main] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Mar 06, 2018 5:35:48 PM org.quartz.simpl.SimpleThreadPool initialize
+INFO: Job execution threads will use class loader of thread: main
+Mar 06, 2018 5:35:48 PM org.quartz.core.QuartzScheduler <init>
+INFO: Quartz Scheduler v.1.6.0 created.
+Mar 06, 2018 5:35:48 PM org.quartz.simpl.RAMJobStore initialize
+INFO: RAMJobStore initialized.
+Mar 06, 2018 5:35:48 PM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+Mar 06, 2018 5:35:48 PM org.quartz.impl.StdSchedulerFactory instantiate
+INFO: Quartz scheduler version: 1.6.0
+Mar 06, 2018 5:35:48 PM org.quartz.core.QuartzScheduler start
+INFO: Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
