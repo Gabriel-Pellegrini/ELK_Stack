@@ -6,3 +6,7 @@ For that we need to have the docker installed in our computer.
 you can get this on this source.
 
 https://www.docker.com/get-docker
+
+You Just need to run the follow command and see it working
+
+docker-compose up
