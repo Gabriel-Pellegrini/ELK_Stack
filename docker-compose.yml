@@ -13,7 +13,8 @@ services:
         - "9200:9200"
         - "9300:9300"
       networks:
-        - default
+        #- default
+        - elkcompose
   logstash:
       image: docker.elastic.co/logstash/logstash:6.2.2
       container_name: logstash
@@ -22,7 +23,8 @@ services:
         - ./logstash:/etc/logstash/conf.d
         - ./logstash/patterns:/opt/logstash/patterns
       networks:
-        - default
+        #- default
+      - elkcompose
       depends_on:
         - elasticsearch
   kibana:
@@ -34,7 +36,8 @@ services:
         - SERVER_NAME=kibana
         - ELASTICSEARCH_URL=http://elasticsearch:9200
       networks:
-        - default
+        #- default
+        - elkcompose
       depends_on:
         - elasticsearch
   beats:
@@ -47,7 +50,8 @@ services:
       - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml
       - ./filebeat/logs:/var/logs
     networks:
-      - default
+      #- default
+      - elkcompose
     depends_on:
       - logstash
   ubuntu:
@@ -64,12 +68,15 @@ services:
     volumes: 
       - .:/var/dockerapp
     networks:
-      - default
+      #- default
+      - elkcompose
     depends_on:
       - elasticsearch
       - logstash
       - beats
 networks:
-  default:
-    external:
-      name: localNetwork
+  #default:
+    #external:
+     # name: localNetwork
+  elkcompose:
+    driver: bridge
