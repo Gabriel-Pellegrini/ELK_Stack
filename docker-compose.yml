@@ -3,32 +3,32 @@ version: '3'
 services:
 
   elasticsearch:
-      image: docker.elastic.co/elasticsearch/elasticsearch:6.2.2
+      image: gabrielpellegrini/elasticsearch 
       container_name: elasticsearch
       environment:
         - node.name=pocfilebeat
         - cluster.name=elasticsearch
         - discovery.type=single-node
       ports:
-        - "9200:9200"
+        - "9200:9200" 
         - "9300:9300"
       networks:
-        #- default
-        - elkcompose
-  logstash:
-      image: docker.elastic.co/logstash/logstash:6.2.2
-      container_name: logstash
-      command: logstash -f /etc/logstash/conf.d/logstash.conf
-      volumes:
-        - ./logstash:/etc/logstash/conf.d
-        - ./logstash/patterns:/opt/logstash/patterns
-      networks:
-        #- default
-      - elkcompose
-      depends_on:
-        - elasticsearch
+        - default
+        #- elkcompose
+  # logstash:
+  #     image: docker.elastic.co/logstash/logstash:6.2.2
+  #     container_name: logstash
+  #     command: logstash -f /etc/logstash/conf.d/logstash.conf
+  #     volumes:
+  #       - ./logstash:/etc/logstash/conf.d
+  #       - ./logstash/patterns:/opt/logstash/patterns
+  #     networks:
+  #       - default
+  #       #- elkcompose
+  #     depends_on:
+  #       - elasticsearch
   kibana:
-      image: docker.elastic.co/kibana/kibana:6.2.2
+      image: gabrielpellegrini/kibana
       container_name: kibana
       ports:
         - "5601:5601"
@@ -36,47 +36,27 @@ services:
         - SERVER_NAME=kibana
         - ELASTICSEARCH_URL=http://elasticsearch:9200
       networks:
-        #- default
-        - elkcompose
+        - default
+        #- elkcompose
       depends_on:
         - elasticsearch
-  beats:
-    image: docker.elastic.co/beats/filebeat:6.2.2
-    container_name: filebeat
-    hostname: filebeat
+  #beats:
+    #image: docker.elastic.co/beats/filebeat:6.2.2
+    #container_name: filebeat
+    #hostname: filebeat
     #entrypoint: "filebeat -e -strict.perms=false"
-    command: "filebeat -e -strict.perms=false"
-    volumes:
-      - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml
-      - ./filebeat/logs:/var/logs
-    networks:
-      #- default
-      - elkcompose
-    depends_on:
-      - logstash
-  ubuntu:
-    image: gabrielpellegrini/logstash:6.2.2
-    container_name: ubuntu
-    hostname: ubuntu1604
-    stdin_open: true
-    tty: true
-    working_dir: "/home/gabriel/logstash"
-    entrypoint: ["/bin/bash"]
-    ports:
-      - "2222:22"
-      - "5044:5044"
-    volumes: 
-      - .:/var/dockerapp
-    networks:
-      #- default
-      - elkcompose
-    depends_on:
-      - elasticsearch
-      - logstash
-      - beats
+    # command: "filebeat -e -strict.perms=false"
+    # volumes:
+    #   - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml
+    #   - ./filebeat/logs:/var/logs
+    # networks:
+    #   #- default
+    #   - elkcompose
+    # depends_on:
+    #   - logstash
 networks:
-  #default:
-    #external:
-     # name: localNetwork
-  elkcompose:
-    driver: bridge
+  default:
+    external:
+      name: localNetwork
+  #elkcompose:
+    #driver: bridge
